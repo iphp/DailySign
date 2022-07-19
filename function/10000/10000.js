@@ -28,6 +28,7 @@ async function changeFiele () {
     content = content.replace("\\ud83d\\udd14${this.name}, \\u7ed3\\u675f! \\ud83d\\udd5b ${e} \\u79d2", ``)
 
     content = content.replace("const phonedat = $.getdata($.KEY_mobile)", `const phonedat = '${KEY}'`)
+    content = content.replace("${sign.idx}. ${sign.phone}", ``)
     await fs.writeFileSync( './10000.js', content, 'utf8')
 }
 
